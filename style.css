@@ -1,0 +1,129 @@
+@font-face {
+    font-family: MuseoSansCyrl;
+    src: url("fonts/MuseoSansCyrl.otf");
+}
+
+@font-face {
+    font-family: MuseoSansCyrl100;
+    src: url("fonts/MuseoSansCyrl100.ttf");
+}
+
+@font-face {
+    font-family: MuseoSansCyrl300;
+    src: url("fonts/MuseoSansCyrl300.ttf");
+}
+
+@font-face {
+    font-family: MuseoSansCyrl700;
+    src: url("fonts/MuseoSansCyrl700.ttf");
+}
+body {
+    background-image: url("source/background.png");
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+main {
+    z-index: 50;
+}
+
+.leftAside {
+    background-image: url("source/travel.png");
+    position: relative;
+
+    width: 425px;
+    height: 78px;
+    margin-top: 8%;
+    margin-left: 10.8%;
+}
+
+.rightAside {
+
+    font-family: MuseoSansCyrl100;
+    font-size: 16pt;
+    padding: 15px;
+    color:  white;
+    position: absolute;
+    margin-left: 65%;
+    margin-top: -10%;
+    display: flex;
+    flex-wrap: wrap;
+    color: white;
+    gap: 1%;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.asideBlock {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 172px;
+    height: 172px;
+    margin: 2%;
+}
+
+.number {
+    font-size: 60pt;
+}
+
+.year {
+    font-size: 20pt;
+}
+
+.asideButton1:hover {
+    background-image: url("source/hover1.png");
+}
+
+.asideButton2:hover {
+    background-image: url("source/hover2.png");
+}
+
+.asideButton3:hover {
+    background-image: url("source/hover3.png");
+}
+
+.asideButton4:hover {
+    background-image: url("source/hover4.png");
+}
+
+@media (max-width: 1180px) {
+
+
+
+    .rightAside {
+
+        font-family: MuseoSansCyrl100;
+        font-size: 16pt;
+        padding: 15px;
+        position: absolute;
+        margin-left: 25%;
+        margin-top: 20%;
+        display: flex;
+        flex-wrap: wrap;
+        color: white;
+        gap: 1%;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .button {
+        margin-left: 20%;
+        margin-top: 10%;
+    }
+
+    .line {
+        display: none;
+    }
+
+
+}
+
+.buttonStart {
+    margin-top: 30%;
+    position: relative;
+}
+
+.line {
+    margin-left: 46.5%;
+}
+

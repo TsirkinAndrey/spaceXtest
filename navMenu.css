@@ -1,0 +1,157 @@
+/*тестовый вариант меню*/
+
+@font-face {
+    font-family: MuseoSansCyrl;
+    src: url("fonts/MuseoSansCyrl.otf");
+}
+
+@font-face {
+    font-family: MuseoSansCyrl100;
+    src: url("fonts/MuseoSansCyrl100.ttf");
+}
+
+@font-face {
+    font-family: MuseoSansCyrl300;
+    src: url("fonts/MuseoSansCyrl300.ttf");
+}
+
+@font-face {
+    font-family: MuseoSansCyrl700;
+    src: url("fonts/MuseoSansCyrl700.ttf");
+}
+
+:root{
+    --white: #f9f9f9;
+} /* variables*/
+
+/* Reset */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: "MuseoSansCyrl", MuseoSansCyrl300;
+}
+a{
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+    background-color: black;
+}
+
+.header{
+    position: sticky;
+    top: 0;
+    width: 100%;
+    height: 15%;
+    background-color: rgba(21, 10, 1, 0.1);
+}
+/* Logo */
+.logo{
+    display: inline-block;
+    font-size: 60px;
+    margin-left: 10px;
+}
+
+.nav{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    overflow: hidden;
+
+}
+.menu a{
+    display: block;
+    padding: 30px;
+    color: var(--white);
+}
+.menu a:hover{
+    background-color: var(--gray);
+}
+.nav{
+    max-height: 0;
+    transition: max-height .5s ease-out;
+}
+
+/* Menu Icon */
+.hamb{
+    cursor: pointer;
+    float: right;
+    padding: 40px 20px;
+}/* Style label tag */
+
+.hamb-line {
+    background: var(--white);
+    display: block;
+    height: 2px;
+    position: relative;
+    width: 24px;
+
+} /* Style span tag */
+
+.hamb-line::before,
+.hamb-line::after{
+    background: var(--white);
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+}
+.hamb-line::before{
+    top: 5px;
+}
+.hamb-line::after{
+    top: -5px;
+}
+
+.side-menu {
+    display: none;
+} /* Hide checkbox */
+
+/* Toggle menu icon */
+.side-menu:checked ~ nav{
+    max-height: 100%;
+}
+.side-menu:checked ~ .hamb .hamb-line {
+    background: transparent;
+}
+.side-menu:checked ~ .hamb .hamb-line::before {
+    transform: rotate(-45deg);
+    top:0;
+}
+.side-menu:checked ~ .hamb .hamb-line::after {
+    transform: rotate(45deg);
+    top:0;
+}
+
+
+@media (min-width: 1180px) {
+    .nav{
+        max-height: none;
+        top: 0;
+        position: relative;
+        float: right;
+        width: fit-content;
+    }
+    .menu li{
+        float: left;
+    }
+    .menu a:hover{
+        background-color: transparent;
+        color: #b1b1b1;
+        border-bottom: #3d3d3d solid 1px;
+
+    }
+
+    .hamb{
+        display: none;
+    }
+}
+
+header {
+    z-index: 100    ;
+}
